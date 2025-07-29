@@ -11,13 +11,8 @@ Este repositorio contiene el desarrollo del curso de **modelos estadísticos**, 
 
 ## 🧠 Temas cubiertos (en progreso)
 
-- [ ] Regresión lineal
-- [ ] Regresión logística
-- [ ] Modelos de clasificación
-- [ ] Árboles de decisión
-- [ ] Validación cruzada
-- [ ] Métricas de desempeño
-- [ ] Regularización (Ridge, Lasso)
+- [] En el script "primer_repo" se trabajara con la consulta de repaso de DataFrames
+- [] A medida de que se avance en el curso se realizaran actualizaciones al Git. 
 
 ## 🛠 Requisitos
 
