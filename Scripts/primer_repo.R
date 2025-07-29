@@ -45,5 +45,49 @@ Y[1,2]
 
 y<- Y[1:5,1:3]
 
+#Selecciono las columnas "Parity" y "case"
+
+Y[,c("parity","case")]
+
+## Crea una variable independiente llamada "case"
+case<- Y$case
+
+#
+attach(Y)
+#filtra por case con la función
+case
+
+######
+######
+#Agregr filas y columnas
+######
+######
+
+# En este ejemplo se trabajara con la base de datos del sistemaa "women"
+
+head(women)
+
+#La guardamos en la variable W
+W<- women
+
+## 1 libra= 0.454 kg
+## 1 pulgada = 0.0254 mts
+
+# Se calcula el valopr de la altura en cms y el valor del peso en kgs
+alturamts <- W$height*0.0254
+PesoKG <- W$weight*0.454
+
+#cbind  , c de "columns"
+#adicionamos las dos columnas creadas a la variable W 
+
+W<- cbind(W, alturamts, PesoKG)
+
+#crear una nueva fila
+fila <- c(35,56,123,123)
+
+
+# rbind agrega filas, se podria en modo ejemplo describir como "r de row"
+rbind(W, fila)
+
 
 
