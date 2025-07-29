@@ -8,7 +8,6 @@ Este repositorio contiene el desarrollo del curso de **modelos estadísticos**, 
 - `datos/`: Bases de datos utilizadas durante el curso
 - `notebooks/`: Documentos en RMarkdown o Quarto con análisis completos
 - `resultados/`: Resultados, gráficas o salidas importantes
-- `apuntes/`: Resúmenes y teoría del curso
 
 ## 🧠 Temas cubiertos (en progreso)
 
