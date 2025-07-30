@@ -1,25 +1,28 @@
-# 📊 Curso de Modelos Estadísticos
+# 📊 primer_repo
 
-Este repositorio contiene el desarrollo del curso de **modelos estadísticos**, incluyendo scripts, análisis y apuntes.
+Este repositorio contiene ejercicios iniciales en R relacionados con el manejo y limpieza de datos utilizando **DataFrames**.
 
-## 🗂 Estructura del repositorio
+## 📌 Descripción
 
-- `scripts/`: Códigos en R con el desarrollo de modelos
-- `datos/`: Bases de datos utilizadas durante el curso
-- `notebooks/`: Documentos en RMarkdown o Quarto con análisis completos
-- `resultados/`: Resultados, gráficas o salidas importantes
+- Este proyecto incluye ejercicios de repaso sobre la manipulación de DataFrames en R.
+- Se ha trabajado la creación, filtrado, ordenamiento y modificación de datos con funciones como `subset()`, `cbind()`, `rbind()` y acceso por índices.
+- A medida que avance el curso, se realizarán actualizaciones y mejoras continuas en el repositorio.
 
-## 🧠 Temas cubiertos (en progreso)
+## 📁 Estructura
 
-- [] En el script "primer_repo" se trabajara con la consulta de repaso de DataFrames
-- [] A medida de que se avance en el curso se realizaran actualizaciones al Git. 
+- `script.R`: Contiene el código trabajado hasta ahora sobre DataFrames.
+- `README.md`: Este archivo con la descripción del proyecto.
 
-## 🛠 Requisitos
+## 🚀 Tecnologías
 
-- R (>= 4.0)
-- RStudio
-- Paquetes: `tidyverse`, `caret`, `glmnet`, `rpart`, entre otros
+- [R](https://www.r-project.org/)
+- [RStudio](https://posit.co/products/open-source/rstudio/)
+- Git y GitHub para control de versiones.
 
-```r
-# Instalar paquetes necesarios
-install.packages(c("tidyverse", "caret", "glmnet", "rpart"))
+## ✅ Estado
+
+En desarrollo. Se actualizará progresivamente conforme se avance en el curso.
+
+---
+
+✍️ *Creado por Jesús Reyes - Estudiante de Estadística*
