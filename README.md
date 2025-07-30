@@ -10,7 +10,7 @@ Este repositorio contiene ejercicios iniciales en R relacionados con el manejo y
 
 ## 📁 Estructura
 
-- `script.R`: Contiene el código trabajado hasta ahora sobre DataFrames.
+- `primer_repo.R`: Contiene el código trabajado hasta ahora sobre DataFrames.
 - `README.md`: Este archivo con la descripción del proyecto.
 
 ## 🚀 Tecnologías
