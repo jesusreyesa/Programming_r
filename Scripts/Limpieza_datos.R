@@ -37,5 +37,38 @@ head(C)
 
 dim(C)
 
+# Esta función lo que hace es mostrarme la información por filas
+
+glimpse(C)
 
 
+
+##Uso de Dplyr
+
+
+head(C)
+
+## Para esa linea, seleccionamos de la tabla "C", seleccionamos id y literatura 
+
+select(C, id, Literatura)
+
+## Un ejemplo no quiero agregar la columna de matematicas, tendremos unicamente la salida de las columnas sin la seleccionada "Matematica"
+
+select(C, -Matematica)
+
+## Filter
+
+#Seleccionamos en matematicas los valores mayores a 4
+
+
+filter(C, Matematica>4)
+
+#En este filtro realizaremos el filtro de, personas que buena calificación en filosofia y superior a literatura
+
+filter(C, Filosofia>Literatura)
+
+
+#En esta linea ejecutaremos la misma base anterior, pero condicionaremos a que Filosofia sea mayor a 7
+
+
+filter(C, Filosofia>Literatura & Filosofia >7)
