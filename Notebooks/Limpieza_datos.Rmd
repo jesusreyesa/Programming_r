@@ -33,3 +33,17 @@ head(Calificaciones2)
 
 ```
 
+```{r}
+# Cargar datos de ejemplo
+data(mtcars)
+
+# Crear un gráfico de dispersión entre el peso del auto y el consumo de gasolina
+plot(mtcars$wt, mtcars$mpg,
+     main = "Relación entre Peso y Consumo de Gasolina",
+     xlab = "Peso del Vehículo (wt)",
+     ylab = "Millas por Galón (mpg)",
+     pch = 19,             # Tipo de punto (círculo sólido)
+     col = "blue")         # Color de los puntos
+
+```
+
