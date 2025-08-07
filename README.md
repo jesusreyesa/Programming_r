@@ -10,7 +10,8 @@ Este repositorio contiene ejercicios iniciales en R relacionados con el manejo y
 
 ## 📁 Estructura
 
-- `primer_repo.R`: Contiene el código trabajado hasta ahora sobre DataFrames.
+- `DataFrames.R`: Contiene el código trabajado hasta ahora sobre DataFrames.
+- `Limpieza_datos.R`: En este trabajaremos acerca de la limpieza de datos.
 - `README.md`: Este archivo con la descripción del proyecto.
 
 ## 🚀 Tecnologías
