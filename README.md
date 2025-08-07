@@ -1,4 +1,4 @@
-# 📊 primer_repo
+# 📊 Analisis de datos con Rstudio
 
 Este repositorio contiene ejercicios iniciales en R relacionados con el manejo y limpieza de datos utilizando **DataFrames**.
 
