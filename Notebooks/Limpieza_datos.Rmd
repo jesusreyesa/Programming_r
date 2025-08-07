@@ -3,3 +3,33 @@ title: "Limpieza_datos"
 output: html_document
 ---
 
+Creare en este espacio el correspondiente archivo en markdown con el fin de visualizar las salidas en Github
+
+#Iniciamos importando las librerias necesarias para realizar cargue y limpieza de datos
+```{r}
+library(dplyr)
+library(tidyr)
+library(readxl)
+```
+
+#Es necesario en mi caso instaar la libreria "here", con el fin de poder identificar la ruta cuando se encuentra en OneDrive
+
+```{r}
+#install.packages("here")
+#library(here)
+```
+
+
+
+## Cada codigo en esta ocasion esta subsegmentado
+
+```{r}
+library(readxl)
+Calificaciones1 <-read_excel(here("Datos","Calificaciones1.xlsx"))
+Calificaciones2 <-read_excel(here("Datos","Calificaciones2.xlsx"))
+
+head(Calificaciones1)
+head(Calificaciones2)
+
+```
+
