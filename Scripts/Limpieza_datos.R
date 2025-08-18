@@ -26,7 +26,7 @@ View(Calificaciones2)
 
 ## Union de bases de datos
 
-# poara este caso las uniremos con el id, llamandola "C"
+# para este caso las uniremos con el id, llamandola "C"
 
 C <- merge(Calificaciones1, Calificaciones2, by = "id", all = TRUE)
 
@@ -72,3 +72,34 @@ filter(C, Filosofia>Literatura)
 
 
 filter(C, Filosofia>Literatura & Filosofia >7)
+
+
+# Exclusión de datos vacios
+
+## Para nuestro ejemplo no tenemos datos vacios, pero podemos ingresar a la tabla del excel y ajustarlo
+## debemos realizar el sihuiente codigo para excluir campos con valores vacios.
+
+
+Sin_NA <- filter(C,!is.na(Matematica))
+
+## Crear nueva tabla, en la cual vamos a agregar una nueva columna, para el caso del ejemplo haremos que 
+## se adiciones una nueva columna en función a un promedio entre matematica y fisica ((matematica+fisica)/2) 
+
+Comparacion <- mutate(Sin_NA, numeros = (Matematica+Fisica)/2)
+
+
+##Adicionar una segunda columna, para este caso seria separado por coma una vez incluyamos un primer calculo
+
+
+Comparacion <- mutate(Sin_NA, numeros = (Matematica+Fisica)/2, letras = (Literatura+Filosofia))
+
+
+## Una nueva columna para validar nuevos campos, en este caondicionales y haremos:
+## Si número es mayor que letras nos dara el mensaje "Numeros > Letras" en el caso contrario "Letras > Numeros"
+
+
+nueva_col <- mutate(Comparacion, comp = ifelse(numeros>letras,"Numeros > letras", "Letras >Numeros"))
+
+
+
+                      
