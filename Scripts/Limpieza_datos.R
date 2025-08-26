@@ -95,11 +95,23 @@ Comparacion <- mutate(Sin_NA, numeros = (Matematica+Fisica)/2, letras = (Literat
 
 
 ## Una nueva columna para validar nuevos campos, en este caondicionales y haremos:
-## Si número es mayor que letras nos dara el mensaje "Numeros > Letras" en el caso contrario "Letras > Numeros"
-
+## Si número es mayor que letras nos dara el mensaje:
+## "Numeros > Letras" en el caso contrario "Letras > Numeros"
 
 nueva_col <- mutate(Comparacion, comp = ifelse(numeros>letras,"Numeros > letras", "Letras >Numeros"))
 
+## La función Arrange , nos ordena en el caso del ejemplo la lista de comparación por el ID
 
+comparacion_2 <- arrange(Comparacion, id)
 
-                      
+comparacion_3 <- arrange(Comparacion, desc(Comparacion))
+
+## OPERADOR %>%
+
+Data_final<- C%>% filter(!is.na(Matematica)) %>%
+  mutate(numeros =(Matematica+Fisica)/2,letras =(Filosofia+Literatura)/2)%>%
+  mutate(Comparacion= ifelse(numeros>letras,"N","L"))%>%
+  arrange(desc(id))%>%
+  select(id,numeros,letras,Comparacion)
+
+summary(Data_final)
