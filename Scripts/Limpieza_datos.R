@@ -106,7 +106,7 @@ comparacion_2 <- arrange(Comparacion, id)
 
 comparacion_3 <- arrange(Comparacion, desc(Comparacion))
 
-## OPERADOR %>%
+## Operador %>%
 
 Data_final<- C%>% filter(!is.na(Matematica)) %>%
   mutate(numeros =(Matematica+Fisica)/2,letras =(Filosofia+Literatura)/2)%>%
@@ -115,3 +115,38 @@ Data_final<- C%>% filter(!is.na(Matematica)) %>%
   select(id,numeros,letras,Comparacion)
 
 summary(Data_final)
+
+
+## Funcion gather()
+
+S <- as_tibble(read_excel("C:/Users/jesus/OneDrive/Escritorio/Modelos_rstudio/Datos/Secciones.xlsx", sheet = "Sheet1"))
+
+
+S <- transform(S,Seccion=as.factor(Seccion))
+
+
+S1 <- gather(S,sexo,numero,Hombre,Mujer)%>%
+  transform(sexo=as.factor(sexo))
+
+S1 <- as_tibble(S1)
+
+
+# Función Spread
+
+S_old <- spread(S1,sexo,numero)
+
+
+
+## Función Separete
+
+M <- as_tibble(read_excel("C:/Users/jesus/OneDrive/Escritorio/Modelos_rstudio/Datos/Secciones.xlsx", sheet = "Sheet2"))
+
+
+M1 <- separate(M,Materia_nivel,c("Materia","Nivel"),sep = "_")
+
+
+
+## unite (union de dos columnas en una sola)
+
+m_old <- unite(M1, materia_nivel,Materia, Nivel, sep = "-")
+
